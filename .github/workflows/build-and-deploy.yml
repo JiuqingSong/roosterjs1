@@ -38,5 +38,3 @@ jobs:
                   BRANCH: gh-pages
                   FOLDER: dist/deploy
 
-            - name: Publish
-              run: node tools/build.js publish --token ${{ secrets.NPM_TOKEN }}

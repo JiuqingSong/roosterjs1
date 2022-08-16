@@ -38,10 +38,11 @@ function publish(options) {
             try {
                 const basePublishString = `npm publish`;
                 const publishString = basePublishString + ` --tag ${tagname}`;
-                exec(publishString, {
-                    stdio: 'inherit',
-                    cwd: path.join(distPath, packageName),
-                });
+                console.log('Fake publish. ' + publishString)
+                // exec(publishString, {
+                //     stdio: 'inherit',
+                //     cwd: path.join(distPath, packageName),
+                // });
             } catch (e) {
                 // Do not treat publish failure as build failure
                 console.log(e);
